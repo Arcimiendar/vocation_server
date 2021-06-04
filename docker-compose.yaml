@@ -1,0 +1,12 @@
+version: '3.9'
+services:
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_PASSWORD: vocation
+      POSTGRES_USER: vocation
+      POSTGRES_DB: vocation
+    ports:
+      - 127.0.0.1:5432:5432
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
